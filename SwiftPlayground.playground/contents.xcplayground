@@ -3,5 +3,6 @@
     <pages>
         <page name='Table of Contents'/>
         <page name='Type'/>
+        <page name='String'/>
     </pages>
 </playground>

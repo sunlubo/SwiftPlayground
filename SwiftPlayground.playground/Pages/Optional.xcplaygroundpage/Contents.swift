@@ -3,6 +3,24 @@
  ****
  # Optional
  */
+enum _Optional<Wrapped>: ExpressibleByNilLiteral {
+    
+    /// The absence of a value.
+    ///
+    /// In code, the absence of a value is typically written using the `nil`
+    /// literal rather than the explicit `.none` enumeration case.
+    case none
+    
+    /// The presence of a value, stored as `Wrapped`.
+    case some(Wrapped)
+    
+    /// Creates an instance that stores the given value.
+    init(_ some: Wrapped) { self = .some(some) }
+    
+    /// Creates an instance initialized with `nil`.
+    init(nilLiteral: ()) { self = .none }
+}
+
 var array = ["one", "two", "three"]
 switch array.index(of: "four") {
 case .some(let idx):

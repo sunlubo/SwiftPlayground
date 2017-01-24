@@ -6,5 +6,6 @@
         <page name='String'/>
         <page name='Optional'/>
         <page name='Enum'/>
+        <page name='Error'/>
     </pages>
 </playground>

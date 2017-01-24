@@ -94,6 +94,41 @@ let product = ArithmeticExpression.multiplication(sum, .number(2))
 
 evaluate(product)
 /*:
+ ----
+ ## Other
+ */
+func add(a: Int, b: Int) -> Int { return a + b }
+
+add(a: 1, b: 2)
+add(a:b:)(1, 2)
+
+let fn = add(a:b:) // (Int, Int) -> Int
+fn(1, 2)
+
+
+enum Foo {
+    case bar(x: Int, y: Int)
+}
+
+let barInit1 = Foo.bar // (Int, Int) -> Foo
+//let barInit2 = Foo.bar(x:y:) // error
+
+let bar1 = barInit1(x: 0, y: 1)
+//let bar2 = barInit1(0, 1) // error
+
+if case let .bar(x: p, y: q) = Foo.bar(x: 0, y: 1) {
+    print(p, q)
+}
+
+if case let .bar(wat) = Foo.bar(x: 0, y: 1) {
+    print(wat.y)
+}
+
+// note: there's no label in the following pattern
+if case let .bar(p, q) = Foo.bar(x: 0, y: 1) {
+    print(p, q) // 0 1
+}
+/*:
  ****
  [Table of Contents](Table%20of%20Contents) | [Previous](@previous) | [Next](@next)
  */

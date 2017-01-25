@@ -7,5 +7,6 @@
         <page name='Optional'/>
         <page name='Enum'/>
         <page name='Error'/>
+        <page name='Generic'/>
     </pages>
 </playground>

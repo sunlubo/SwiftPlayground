@@ -6,6 +6,7 @@
  - [Optional](Optional)
  - [Enum](Enum)
  - [Error](Error)
+ - [Generic](Generic)
  ****
  [Next](@next)
  */

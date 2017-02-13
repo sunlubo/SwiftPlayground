@@ -1,2 +1,2 @@
 # SwiftPlayground
-Some examples about swift programming language
+Some examples about Swift programming language.
